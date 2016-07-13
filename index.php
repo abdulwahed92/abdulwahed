@@ -38,6 +38,12 @@
 
 
 </head>
+
+
+
+
+
+
 <body>
 
 <div id="wrapper">
@@ -92,9 +98,21 @@
         </div>
     </div>
     <!-- /.intro -->
-
+    
+    
+   
     <div class="main-container">
         <div class="container">
+            
+            
+             <?php $year = date(" Y ");
+    echo $year;
+
+
+      ?>  
+      
+      
+      
             <div class="row">
                 <div class="col-sm-12 page-content col-thin-right">
                     <div class="inner-box category-content">
@@ -191,7 +209,7 @@
     <div class="footer" id="footer">
         <div class="container">
             <ul class=" pull-right navbar-link footer-nav">
-                <li> &copy; 2016 - development by Sopinet Software</li>
+                <li> &copy; <?php echo$year  ?> - development by Sopinet Software</li>
             </ul>
         </div>
     </div>

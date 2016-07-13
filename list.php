@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,11 +117,19 @@
                     <div class="category-list">
                         <div class="tab-box clearfix ">
 
+
+
+
+
+
+
                             <!-- Nav tabs -->
+                            
+                           
                             <div class="col-lg-12  box-title no-border">
                                 <div class="inner">
                                     <h2><span> Trayectos </span> publicados
-                                        <small> 1 resultado encontrado</small>
+                                        <small><?php echo $trayectos; ?> resultado(s) encontrado(s)</small>
 
 
                                     </h2>
@@ -128,6 +137,46 @@
                             </div>
                             
                         <div class="adds-wrapper jobs-list">
+                            
+                            
+                            <?php 
+                            $trayectos=array(
+                            1 => array( 
+                                'name' => "Antonio pèrez",
+                                'trayecto' => "Còrdoba a Huelva"
+                                ),
+                                
+                                2 => array(
+                                    'name' => "Antonio Garcìa",
+                                    'trayecto' => "Còrdoba a Sevilla"
+                                    ),
+                                 
+                            3 =>    array(
+                                'name' => "jose luis",
+                                'trayecto' => "Còrdoba a Madrid"
+                                ),
+                                 );
+                        
+                        
+                                
+                            echo'<pre>';
+                             var_dump($trayectos);
+                             echo'</pre>';
+                            
+                            
+                            
+                            
+                            for($i=1 ; $i <= count($trayectos); $i=$i+1)
+                            {
+                                ?>
+                            
+                    
+
+
+
+
+                            
+                            
                             <div class="item-list job-item">
 
 
@@ -139,15 +188,24 @@
                                 <!--/.photobox-->
                                 <div class="col-sm-10  col-xs-10  add-desc-box">
                                     <div class="add-details jobs-item">
-                                        <h5 class="company-title"><a href="">Antonio Pérez</a></h5>
-                                        <h4 class="job-title"><a href="job-details.html"> Córdoba a Huelva </a></h4>
+                                        <h5 class="company-title"><a href=""> <?php echo$trayectos [$i]['name'] ;                           ?>        </a></h5>
+                                        <h4 class="job-title"><a href="job-details.html"> <?php echo $i . "."  ?> Córdoba a Huelva  </a></h4>
                                         <span class="info-row">  <span class="item-location"><i
                                                 class="fa fa-map-marker"></i> Calle Poeta Paredes, 25 </span> <span class="date"><i
                                                 class=" icon-clock"> </i>9:00</span><span class=" salary">	<i
                                                 class=" icon-money"> </i> 10€</span></span>
-
+                                               
+                                               
+                                               
+                                               
                                         <div class="jobs-desc">
-                                            Un viaje entretenido y seguro, no me gusta correr. Además, pararemos a mitad de camino para tomar una rica tostada de sobraasada, y luego, directos a Huelva.
+                                            <?php 
+                                                $frase= "Un viaje entretenido y seguro, no me gusta correr. Además, pararemos a mitad de camino para tomar una rica tostada de sobraasada, y luego, directos a Huelva.";
+                                                $frase2=substr($frase,0,90);
+                                                $frase3=$frase2 . "..................................";
+                                                
+                                                echo $frase3 ;
+                                            ?>
                                         </div>
 
 
@@ -170,7 +228,20 @@
                                 <!--/.add-desc-box-->
                             </div>
                             <!--/.job-item-->
+                            
+                                                    <?php
+                            }
+                        ?>
                         </div>
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>    
                 </div>    
                 
