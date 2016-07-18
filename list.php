@@ -129,7 +129,7 @@
                             <div class="col-lg-12  box-title no-border">
                                 <div class="inner">
                                     <h2><span> Trayectos </span> publicados
-                                        <small><?php echo $trayectos; ?> resultado(s) encontrado(s)</small>
+                                        <small><?php echo count($trayectos); ?> resultado(s) encontrado(s)</small>
 
 
                                     </h2>
@@ -143,30 +143,68 @@
                             $trayectos=array(
                             1 => array( 
                                 'name' => "Antonio pèrez",
-                                'trayecto' => "Còrdoba a Huelva"
+                                'trayecto' => "Còrdoba a Huelva",
+                                'origen' => "Còrdoba",
+                                'destino' =>"Huelva",
+                                'calle' =>"marino mendez nuñez ",
+                                'hora' => "7:00"
+                                
                                 ),
                                 
                                 2 => array(
                                     'name' => "Antonio Garcìa",
-                                    'trayecto' => "Còrdoba a Sevilla"
+                                    'trayecto' => "Còrdoba a Sevilla",
+                                      'origen' => "Còrdoba",
+                                'destino' =>"Sevilla",
+                                'calle' =>"marino mendez nuñez ",
+                                'hora' => "9:00"
                                     ),
                                  
                             3 =>    array(
                                 'name' => "jose luis",
-                                'trayecto' => "Còrdoba a Madrid"
+                                'trayecto' => "Còrdoba a Madrid",
+                                  'origen' => "Còrdoba",
+                                'destino' =>"Madrid",
+                                'calle' =>"marino mendez nuñez ",
+                                'hora' => "10:00"
+                                
                                 ),
+                                
+                                
+                                  4 => array( 
+                                'name' => "Alejandro perez",
+                                'trayecto' => "Còrdoba a Malaga",
+                                'origen' => "Còrdoba",
+                                'destino' =>"Malga",
+                                'calle' =>"marino mendez nuñez ",
+                                'hora' => "11:00"
+                                
+                                ),
+                            
                                  );
                         
-                        
+                     
                                 
-                            echo'<pre>';
-                             var_dump($trayectos);
-                             echo'</pre>';
+                 
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                        
+                        
+                        
                             
+                          ?>
+                          
+                          
                             
-                            
-                            
-                            for($i=1 ; $i <= count($trayectos); $i=$i+1)
+                            <?php
+                            for ($i=1 ; $i <= count($trayectos); $i=$i+1)
                             {
                                 ?>
                             
@@ -188,7 +226,7 @@
                                 <!--/.photobox-->
                                 <div class="col-sm-10  col-xs-10  add-desc-box">
                                     <div class="add-details jobs-item">
-                                        <h5 class="company-title"><a href=""> <?php echo$trayectos [$i]['name'] ;                           ?>        </a></h5>
+                                        <h5 class="company-title"><a href=""> <?php echo $trayectos [$i]['name'] . "a". $trayectos [$i]['origen'] . $trayectos [$i]['destino']; ?>      </a></h5>
                                         <h4 class="job-title"><a href="job-details.html"> <?php echo $i . "."  ?> Córdoba a Huelva  </a></h4>
                                         <span class="info-row">  <span class="item-location"><i
                                                 class="fa fa-map-marker"></i> Calle Poeta Paredes, 25 </span> <span class="date"><i
